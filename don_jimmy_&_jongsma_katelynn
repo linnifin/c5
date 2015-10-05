@@ -1,0 +1,16 @@
+void setup() {
+  size(255, 255); //setup for canvas size
+}
+
+void draw() {
+  smooth(); //anti-aliasing
+  strokeWeight(4); //setting weight for the stroke/points
+  for (int y = 5; y <= height; y += 10) { //initial variable is y=5, test is y<=max height of canvas, and updater is y+10
+    for (int x = 5; x <= width; x += 10) { //initial variable is x=5, test is x<=max width of canvas, and updater is x+10
+      stroke(x, y, 255-x); //stroke color is set to whatever the rgb value (r,g,b)
+      point(x, y); //x and y coordinates for the points
+      //println("this is x ", x);
+      //println("this is y ", y);
+    }
+  }
+}
